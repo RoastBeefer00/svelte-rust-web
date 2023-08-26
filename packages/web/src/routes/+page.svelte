@@ -4,25 +4,19 @@
   import Counter from "../lib/Counter.svelte";
 </script>
 
-<main>
-  <img src={logo} alt="Svelte Logo" />
-  <h1>Hello Vite+Rust!</h1>
+<main class="text-center p-1 my-0 mx-auto">
+  <img class="mx-auto h-64 w-64" src={logo} alt="Svelte Logo" />
+  <h1 class="max-w-none min-w-[480px] max-w-[14rem] text-[#ff3e00] uppercase text-6xl font-thin leading-12 my-2 mx-auto">Hello Vite+Rust!</h1>
 
   <div>
     <Counter />
   </div>
-  <div class="alert">
+  <div class="mt-3">
     <Alert />
   </div>
 
-  <p>
-    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-    apps.
-  </p>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-    the officially supported framework, also powered by Vite!
+  <p class="max-w-md my-1 mx-auto leading-5">
+    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a>, powered by Vite!
   </p>
 </main>
 
@@ -30,46 +24,5 @@
   :root {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  }
-
-  main {
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto;
-  }
-
-  img {
-    height: 16rem;
-    width: 16rem;
-  }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin: 2rem auto;
-    max-width: 14rem;
-  }
-
-  p {
-    max-width: 14rem;
-    margin: 1rem auto;
-    line-height: 1.35;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      max-width: none;
-    }
-
-    p {
-      max-width: none;
-    }
-  }
-
-  .alert {
-    margin-top: 30px;
   }
 </style>

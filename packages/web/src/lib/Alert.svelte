@@ -2,30 +2,7 @@
   import { helloWorld } from '$lib/pkg/vite_wasm_functions'
 </script>
 
-<button on:click={() => helloWorld()}>
+<button class="py-1 px-2 rounded-3xl bg-[#ff3e001a] active:bg-[#ff3e0033] border-solid focus:border-[#ff3e00] text-[#ff3e00] border-2 border-[#ff3e0000] outline-none w-[200px] cursor-pointer" on:click={() => helloWorld()}>
   Alert from Rust!
 </button>
 
-<style>
-  button {
-    font-family: inherit;
-    font-size: inherit;
-    padding: 1em 2em;
-    color: #ff3e00;
-    background-color: rgba(255, 62, 0, 0.1);
-    border-radius: 2em;
-    border: 2px solid rgba(255, 62, 0, 0);
-    outline: none;
-    width: 200px;
-    font-variant-numeric: tabular-nums;
-    cursor: pointer;
-  }
-
-  button:focus {
-    border: 2px solid #ff3e00;
-  }
-
-  button:active {
-    background-color: rgba(255, 62, 0, 0.2);
-  }
-</style>
