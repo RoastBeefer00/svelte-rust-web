@@ -26,17 +26,21 @@ npm i -g yarn
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 // follow installation prompts, close and reopen terminal after install.
 ```
-8. Install [wasm-bindgen](https://rustwasm.github.io/wasm-bindgen/reference/cli.html)
+8. Add WASM target
+```bash
+rustup target add wasm32-unknown-unknown
+```
+9. Install [wasm-bindgen](https://rustwasm.github.io/wasm-bindgen/reference/cli.html)
 ```bash
 cargo install -f wasm-bindgen-cli
 ```
-9. If in Ubuntu or similar, you need to install a CC linker (you might already have it if you've run sudo apt-get update before), run
+10. If in Ubuntu or similar, you need to install a CC linker (you might already have it if you've run sudo apt-get update before), run
 ```bash
 sudo apt-get update
 sudo apt install build-essential
 
 ```
-10. Yarn needs rust to be built at least once so it can cross reference dependencies in the monorepo. Run in the `packages/rust` directory
+11. Yarn needs rust to be built at least once so it can cross reference dependencies in the monorepo. Run in the `packages/rust` directory
 ```bash
 cd packages/rust
 # build WebAssembly and Javascript wrappers using wasm-pack
@@ -48,19 +52,19 @@ yarn
 # go back to the monorepo root directory
 cd ../..
 ```
-11. Install node dependencies, run
+12. Install node dependencies, run
 ```bash
 yarn
 ```
-12. Install [cargo watch](https://crates.io/crates/cargo-watch)
+13. Install [cargo watch](https://crates.io/crates/cargo-watch)
 ```bash
 cargo install cargo-watch
 ```
-13. To start the development server, run
+14. To start the development server, run
 ```
 yarn dev
 ```
-14. Enjoy! Got some feedback? Open an issue, or better yet, a PR. If you like this template, please star this repo.
+15. Enjoy! Got some feedback? Open an issue, or better yet, a PR. If you like this template, please star this repo.
 
 ## What's next
 This needs to work with a regular CI (ie: vercel/netlify/github pages). Will create a guide for this if there is enough demand for it.
