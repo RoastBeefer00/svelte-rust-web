@@ -1,7 +1,7 @@
-<script lang="ts">
-  import logo from "./assets/svelte.png";
-  import Alert from "./lib/Alert.svelte";
-  import Counter from "./lib/Counter.svelte";
+<script>
+  import logo from "../assets/svelte.png";
+  import Alert from "../lib/Alert.svelte";
+  import Counter from "../lib/Counter.svelte";
 </script>
 
 <main>

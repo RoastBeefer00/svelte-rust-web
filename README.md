@@ -26,9 +26,9 @@ npm i -g yarn
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 // follow installation prompts, close and reopen terminal after install.
 ```
-8. Install [wasm-pack](https://rustwasm.github.io/wasm-pack/installer/)
+8. Install [wasm-bindgen](https://rustwasm.github.io/wasm-bindgen/reference/cli.html)
 ```bash
-curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+cargo install -f wasm-bindgen-cli
 ```
 9. If in Ubuntu or similar, you need to install a CC linker (you might already have it if you've run sudo apt-get update before), run
 ```bash
@@ -41,7 +41,8 @@ sudo apt install build-essential
 cd packages/rust
 # build WebAssembly and Javascript wrappers using wasm-pack
 # don't panic, this might take a few seconds
-wasm-pack build --target web
+cargo build --release --target=wasm32-unknown-unknown
+wasm-bindgen target/wasm32-unknown-unknown/release/vite_wasm_functions.wasm --out-dir pkg
 # Then initialize yarn in the rust directory
 yarn
 # go back to the monorepo root directory

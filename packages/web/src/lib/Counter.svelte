@@ -1,7 +1,7 @@
-<script lang="ts">
-  import { addArray } from "vite-wasm-functions";
+<script> 
+  import { addArray } from "$lib/pkg/vite_wasm_functions";
 
-  let count: number = 0;
+  let count = 0;
   let arr = [];
   let rustSum = 0
   const increment = () => {
